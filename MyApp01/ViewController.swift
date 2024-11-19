@@ -8,12 +8,21 @@
 import UIKit
 
 class ViewController: UIViewController {
+    @IBOutlet weak var tfNombres: UITextField!
+    @IBOutlet weak var tfApellidos: UITextField!
+    @IBOutlet weak var tfFecNac: UITextField!
+    
+    var Codigo: Int32 = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        self.Codigo = 0
     }
 
-
+    @IBAction func btnLimpiar(_ sender: Any) {
+        tfNombres.text = ""
+        tfApellidos.text = ""
+        tfFecNac.text = ""
+    }
 }
 
